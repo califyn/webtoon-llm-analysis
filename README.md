@@ -16,7 +16,7 @@ In case it's not clear, this is what I mean by visual irony:
 
 ![Panel: "What a nice day" while looking out at pouring rain.](./everything_is_fine.png)
 
-To be fair to the LLM, there are no other horror webtoons, so it might've been forced to classify it with romance, but still... The misclassification appears to be a little less egregious on the [large model](./dimensionality_reduced_lg.png) than the [small model](./dimensionality_reduced.png). Scale is all you need?
+To be fair to the LLM, there are not many other horror webtoons, so it might've been forced to classify it with romance, but still... The misclassification appears to be a little less egregious on the [large model](./recommendations_lg.png) than the [small model](./recommendations.png). In fact, the fourth-closest neighbor of *Everything is Fine* in the large model is the other horror comic *Homesick*, whereas the top four are all romance in the small model. Scale is all you need?
 
 If I were to actually do this, I'd definitely use a multimodal method. But for today I'm just interested in slapping an LLM on it and calling it a day.
 
