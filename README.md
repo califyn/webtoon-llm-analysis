@@ -40,4 +40,4 @@ Generally, I'd say the recommendations made by the large model are better than t
 
 ### Thoughts on the Cohere API
 
-It was very easy to use, which I really like. As promised, you can pretty much plug and play. On the other hand, it seemed a bit unwieldy to customize at all, or to ask the model to look for things in particular rather than just embedding (it would have been fun to try to ask it to rate quality, for example.) Perhaps that'd be possible with a generative model.
+It was very easy to use, which I really like. As promised, you can pretty much plug and play. On the other hand, it seemed a bit unwieldy to customize at all, or to ask the model to look for things in particular rather than just embedding (it would have been fun to try to ask it to rate quality, for example, although at that point I might just be pointing out general limitations of LLMs and not Cohere's platform.) Perhaps that'd be possible with a generative model.
