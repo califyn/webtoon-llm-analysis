@@ -20,7 +20,7 @@ import matplotlib.pyplot as plt
 
 EP_NUMBER = 10
 DIMENSIONALITY_REDUCTION = 'pca'
-SIZE = 'large'
+SIZE = 'small'
 
 data = []
 titles = []
@@ -62,7 +62,7 @@ if SIZE == "small":
 elif SIZE == "large":
     lg_str = "_lg"
 with open("recommendations" + lg_str + ".tsv", "w") as f:
-    f.write("Webtoon\tMost to Least Similar\n")
+    f.write("Webtoon\tMost to Least Similar" + ("\t" * (num_toons - 2)) + "\n")
     f.write("\n".join(["\t".join(rec) for rec in recs]))
 with open("originality" + lg_str + ".tsv", "w") as f:
     f.write("Most Alike\n")
