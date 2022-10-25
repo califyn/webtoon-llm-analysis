@@ -18,7 +18,9 @@ In case it's not clear, this is what I mean by visual irony:
 
 (Panel from *Everything is Fine*.)
 
-To be fair to the LLM, there are not many other horror webtoons, so it might've been forced to classify it with romance, but still... The misclassification appears to be significantly less egregious on the [large model](./recommendations_lg.tsv) than the [small model](./recommendations.tsv). In fact, the fourth-closest neighbor of *Everything is Fine* in the large model is the other horror comic *Homesick*, and only two of these four neighbors are romance. Scale is all you need?
+To be fair to the LLM, there are not many other horror webtoons, so it might've been forced to classify it with romance, but still...
+
+The misclassification appears to be significantly less egregious on the [large model](./recommendations_lg.tsv) than the [small model](./recommendations.tsv). In fact, the fourth-closest neighbor of *Everything is Fine* in the large model is the other horror comic *Homesick*, and only two of these four neighbors are romance. Scale is all you need?
 
 If I were to optimize this analysis, I'd definitely use a multimodal method that incorporates the images as well. But for today I'm just interested in slapping an LLM on it and calling it a day.
 
@@ -44,4 +46,4 @@ Generally, I'd say the recommendations made by the large model are better than t
 
 ### Thoughts on the Cohere API
 
-It was very easy to use, which I really like. As promised, you can pretty much plug and play, and my queries are resolved really fast. On the other hand, it seemed a bit unwieldy to customize anything, or to ask the model to look for things in particular rather than just embedding (it would have been fun to try to ask it to rate quality, for example, although at that point I might just be pointing out general limitations of LLMs instead of Cohere's platform.) I could fine-tune it or something but then I need my own dataset; it'd be nice to have some built-in options. More might've been possible with a generative model, I suppose.
+It was very easy to use, which I really like. As promised, you can pretty much plug and play, and my queries are resolved really fast. On the other hand, it seemed a bit unwieldy to customize anything, or to ask the model to look for things in particular rather than just embedding (it would have been fun to try to ask it to rate quality, for example, although at that point I might just be pointing out general limitations of LLMs instead of Cohere's platform.) I could fine-tune it or something but then I need my own dataset; it'd be nice to have some built-in options. More might've been possible with a generative model and some few-shot prompting, I suppose.
