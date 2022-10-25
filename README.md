@@ -16,7 +16,7 @@ In case it's not clear, this is what I mean by visual irony:
 
 ![Panel: "What a nice day" while looking out at pouring rain.](./everything_is_fine.png)
 
-To be fair to the LLM, there are no other horror webtoons, so it might've been forced to classify it with romance, but still... The misclassification appears to be a little less egregious on the [large model](./dimensionality_reduction_lg.png) than the [small model](./dimensionality_reduction.png). Scale is all you need?
+To be fair to the LLM, there are no other horror webtoons, so it might've been forced to classify it with romance, but still... The misclassification appears to be a little less egregious on the [large model](./dimensionality_reduced_lg.png) than the [small model](./dimensionality_reduced.png). Scale is all you need?
 
 If I were to actually do this, I'd definitely use a multimodal method. But for today I'm just interested in slapping an LLM on it and calling it a day.
 
@@ -24,7 +24,7 @@ If I were to actually do this, I'd definitely use a multimodal method. But for t
 
 Here's the embeddings of each of the 48 webtoons with PCA, colored by genre:
 
-![PCA result of large model's embeddings](./dimensionality_reduction_lg.png)
+![PCA result of large model's embeddings](./dimensionality_reduced_lg.png)
 
 If I had to guess, the two significant axes are left-to-right romance to action and top-down native English to translated English (many more translated Korean webcomics are at the bottom.) A lot of the fantasy webtoons in the middle have a lot of romance in them.
 
@@ -34,7 +34,7 @@ On the other hand, the least unique webtoons are pretty much all romance. So if 
 
 ### Can we make it a recommendation engine?
 
-Since clearly I only want to read webtoons similar to the ones I already like, we can make these embeddings into a recommendation engine via employing nearest neighbors. The recommendations generated can be found in [recommendations_lg.tsv](../recommendations_lg.tsv).  They're overall pretty good, I'd say; for example, *Suitor Armor* is one of the recommendations for *Like Wind on a Dry Branch* and I definitely think these go together. On the other hand, the recommendations for *Everything is Fine* is just horrible, as expected.
+Since clearly I only want to read webtoons similar to the ones I already like, we can make these embeddings into a recommendation engine via employing nearest neighbors. The recommendations generated can be found in [recommendations_lg.tsv](./recommendations_lg.tsv).  They're overall pretty good, I'd say; for example, *Suitor Armor* is one of the recommendations for *Like Wind on a Dry Branch* and I definitely think these go together. On the other hand, the recommendations for *Everything is Fine* is just horrible, as expected.
 
 ### Thoughts on the Cohere API
 
