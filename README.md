@@ -34,7 +34,7 @@ On the other hand, the least unique webtoons are pretty much all romance. So if 
 
 ### Can we make it a recommendation engine?
 
-Since clearly I only want to read webtoons similar to the ones I already like, we can make these embeddings into a recommendation engine via employing nearest neighbors. The recommendations generated can be found in [recommendations_lg.tsv](./recommendations_lg.tsv).  They're overall pretty good, I'd say; for example, *Suitor Armor* is one of the recommendations for *Like Wind on a Dry Branch* and I definitely think these go together. On the other hand, the recommendations for *Everything is Fine* is just horrible, as expected.
+Since clearly I only want to read webtoons similar to the ones I already like, we can make these embeddings into a recommendation engine via employing nearest neighbors. The recommendations generated can be found in [recommendations_lg.tsv](./recommendations_lg.tsv).  They're overall pretty good, I'd say; for example, *My Gently Raised Beast* is one of the recommendations for *Eleceed* and this is a pretty good pairing. On the other hand, the recommendations for *Everything is Fine* is just horrible, as expected.
 
 Generally, I'd say the recommendations made by the large model are better than the small model. There's less bizarre recommendations and more variety in the 1st recommendation (nearest neighbor).
 
