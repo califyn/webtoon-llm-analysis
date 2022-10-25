@@ -10,7 +10,7 @@ In this analysis, I scraped 48 popular webcomics off of the [Webtoons](https://w
 
 ### Does it work?
 
-Kind of... For such a visual medium, a surprising amount can be gleaned from just the text, which is the only thing the LLM can see. Generally, it's able to infer genre, at least, out-of-the-box & zero-shot. There's one noticeable exception: the horror webtoon [Everything is Fine](https://www.webtoons.com/en/horror/everything-is-fine/list?title_no=2578), which uses mostly visual irony and subtly strange conversation to achieve its effect, is horribly misclassified as... romance? (See its nearest neighbors [here](./recommendations.tsv); all four are romance.)
+Kind of... For such a visual medium, a surprising amount can be gleaned from just the text, which is the only thing the LLM can see. Generally, it's able to infer genre, at least, out-of-the-box & zero-shot. There's one noticeable exception: the horror webtoon [Everything is Fine](https://www.webtoons.com/en/horror/everything-is-fine/list?title_no=2578), which uses mostly visual irony and subtly strange conversation to achieve its effect, is horribly misclassified as... romance? (See its nearest neighbors with the small model [here](./recommendations.tsv); all four are romance.)
 
 In case it's not clear, this is what I mean by visual irony:
 
@@ -32,7 +32,7 @@ If I had to guess, the x-axis runs romance to action and the y-axis runs native 
 
 ### Uniqueness
 
-Now to answer the following pivotal question: are romance webtoons really all the same? Take a look at [originality.tsv](./originality.tsv), which scores each webcomic based off the average cosine distance to its five closest neighbors. Higher distance to neighbors implies that it is more "unique", in some sense. The most unique with this metric is *unOrdinary*, which makes sense as it's a pretty unique comic; the writing style and pace are both pretty unusual for a webtoon. Interestingly enough, almost all the ones I like and read have high uniqueness, so I guess I'm a novelty seeker. It's surprising that the LLM can glean this much from a shoddily put together script on my side and I think it's really cool.
+Now to answer the following pivotal question: are romance webtoons really all the same? Take a look at [originality_lg.tsv](./originality_lg.tsv), which scores each webcomic based off the average cosine distance to its five closest neighbors. Higher distance to neighbors implies that it is more "unique", in some sense. The most unique with this metric is *unOrdinary*, which makes sense as it's a pretty unique comic; the writing style and pace are both pretty unusual for a webtoon. Interestingly enough, almost all the ones I like and read have high uniqueness, so I guess I'm a novelty seeker. It's surprising that the LLM can glean this much from a shoddily put together script on my side and I think it's really cool.
 
 On the other hand, the least unique webtoons are pretty much all romance. So if you feel that romance webcomics are all the same, here's some definitive evidence for that.
 
