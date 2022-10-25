@@ -28,7 +28,7 @@ Here's the embeddings of each of the 48 webtoons with PCA, colored by genre:
 
 If I had to guess, the two significant axes are left-to-right romance to action and top-down native English to translated English (many more translated Korean webcomics are at the bottom.) A lot of the fantasy webtoons in the middle have a lot of romance in them.
 
-Now to answer the pivotal questions, are romance webtoons really all the same? Take a look at [originality.tsv](../originality.tsv), which scores each webcomic based off the average cosine distance to its five closest neighbors. The most "unique" with this metric is UnOrdinary, which makes sense as it's a pretty unique comic. Interestingly enough, almost all the ones I like and read are near the bottom, so I guess I'm a novelty seeker. It's surprising that the LLM can glean this much from a shoddily put together script on my side and I think it's really cool.
+Now to answer the pivotal questions, are romance webtoons really all the same? Take a look at [originality.tsv](./originality.tsv), which scores each webcomic based off the average cosine distance to its five closest neighbors. The most "unique" with this metric is UnOrdinary, which makes sense as it's a pretty unique comic. Interestingly enough, almost all the ones I like and read are near the bottom, so I guess I'm a novelty seeker. It's surprising that the LLM can glean this much from a shoddily put together script on my side and I think it's really cool.
 
 On the other hand, the least unique webtoons are pretty much all romance. So if you feel that romance is all the same, here's some definitive evidence for that.
 
