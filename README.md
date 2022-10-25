@@ -4,7 +4,7 @@ I whipped this up over a weekend to test out [Cohere](https://docs.cohere.ai)'s 
 
 ## How it works
 
-In the final analysis, I kept 48 popular webcomics scraped off of the [Webtoons](https://www.webtoons.com/en/) platform with Selenium Wire. Each webcomic had its first 10 episodes OCR'd with Tesseract, cleaned minimally, and then embedded in 4096 dimensions with Cohere's API and averaged out to form one high-dim embedding for each webcomic.
+In the final analysis, I kept 48 popular webcomics scraped off of the [Webtoons](https://www.webtoons.com/en/) platform with Selenium Wire. Each webcomic had its first 10 episodes OCR'd with Tesseract, cleaned minimally, and then the resulting text embedded in 4096 dimensions with Cohere's API and averaged out to form one high-dim embedding for each webcomic.
 
 ## Results
 
