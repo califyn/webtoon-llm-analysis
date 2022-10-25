@@ -4,7 +4,7 @@ I whipped this up over a weekend to test out [Cohere](https://docs.cohere.ai)'s 
 
 ## How it works
 
-In this analysis, I scraped 48 popular webcomics off of the [Webtoons](https://www.webtoons.com/en/) platform with selenium-wire. Each webcomic had its first 10 episodes OCR'd into pure text with Tesseract, cleaned minimally, and then the cleaned text embedded in 1024 (small) or 4096 (large) dimensions with Cohere's API to form one high-dim embedding for each webcomic.
+In this analysis, I scraped 48 popular webcomics off of the [Webtoons](https://www.webtoons.com/en/) platform with selenium-wire. Each webcomic had its first 10 episodes OCR'd into pure text with Tesseract, cleaned minimally, and then the cleaned text embedded in 1024 (small) or 4096 (large) dimensions with Cohere's API to form one high-dim embedding for each webcomic. I used scikit-learn and NumPy to run analyses, and matplotlib for plotting.
 
 ## Results
 
@@ -18,13 +18,13 @@ In case it's not clear, this is what I mean by visual irony:
 
 (Panel from *Everything is Fine*.)
 
-To be fair to the LLM, there are not many other horror webtoons, so it might've been forced to classify it with romance, but still... The misclassification appears to be significantly less egregious on the [large model](./recommendations_lg.tsv) than the [small model](./recommendations.tsv). In fact, the fourth-closest neighbor of *Everything is Fine* in the large model is the other horror comic *Homesick*, and only half are romance. Scale is all you need?
+To be fair to the LLM, there are not many other horror webtoons, so it might've been forced to classify it with romance, but still... The misclassification appears to be significantly less egregious on the [large model](./recommendations_lg.tsv) than the [small model](./recommendations.tsv). In fact, the fourth-closest neighbor of *Everything is Fine* in the large model is the other horror comic *Homesick*, and only two of these four neighbors are romance. Scale is all you need?
 
-If I were to optimize this analysis, I'd definitely use a multimodal method. But for today I'm just interested in slapping an LLM on it and calling it a day.
+If I were to optimize this analysis, I'd definitely use a multimodal method that incorporates the images as well. But for today I'm just interested in slapping an LLM on it and calling it a day.
 
 ### What does it tell us?
 
-Here's the embeddings of each of the 48 webtoons with PCA, colored by genre:
+Here's the embeddings of each of the 48 webtoons reduced to two dimensions with PCA, colored by genre:
 
 ![PCA result of large model's embeddings](./dimensionality_reduced_lg.png)
 
